@@ -41,7 +41,7 @@ We provide tests for mentioned above methods:
 
     List.of("a", "b", "c").forEach(stringJoiner::add);    
     ```
-* merge two different StringJoiners
+* merge two different `StringJoiners`
     ```
     var stringJoinerComma = new StringJoiner(",");
     List.of("a", "b", "c").forEach(stringJoinerComma::add);
@@ -53,7 +53,7 @@ We provide tests for mentioned above methods:
     
     assertThat(merged.toString(), is("a,b,c,d.e.f"));
     ```
-* empty StringJoiner with / without prefix and suffix
+* empty `StringJoiner` with / without prefix and suffix
     ```
     var stringJoiner = new StringJoiner(",");
         
@@ -64,7 +64,7 @@ We provide tests for mentioned above methods:
     
     assertThat(stringJoiner.toString(), is("prefix-suffix"));
     ```
-* configure empty StringJoiner - setEmptyValues
+* configure empty `StringJoiner` - `setEmptyValues`
     ```
     var stringJoiner = new StringJoiner(",");
     stringJoiner.setEmptyValue("empty");
