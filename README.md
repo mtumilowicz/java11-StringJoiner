@@ -6,8 +6,27 @@ Please refer my other github project about joining Strings
 (using Collectors.joining or String.join): 
 [Collectors.joining](https://github.com/mtumilowicz/java11-collectors-joining).
 
-
-
+* constructors
+    ```
+    public StringJoiner(CharSequence delimiter)
+    
+    public StringJoiner(CharSequence delimiter,
+                            CharSequence prefix,
+                            CharSequence suffix)
+    ```
+* methods
+    * `public StringJoiner setEmptyValue(CharSequence emptyValue)` - 
+    Sets the sequence of characters to be used when determining the string
+    representation of this `StringJoiner` and no elements have been
+    added yet, that is, when it is empty. **Note that once an add method 
+    has been called, the `StringJoiner` is no longer considered empty, 
+    even if the element(s) added correspond to the empty `String`.**
+    * `public StringJoiner add(CharSequence newElement)`
+    * `public StringJoiner merge(StringJoiner other)` - 
+    Merge adds the contents of the given `StringJoiner`
+    without prefix and suffix as the next element if it is non-empty. 
+    If the given `StringJoiner` is empty, the call has no effect.
+    
 # project description
 We provide tests for mentioned above methods:
 * "a", "b", "c" -> "a,b,c"
@@ -34,9 +53,6 @@ We provide tests for mentioned above methods:
     
     assertThat(merged.toString(), is("a,b,c,d.e.f"));
     ```
-    _Remark_: Merge adds the contents of the given `StringJoiner`
-    without prefix and suffix as the next element if it is non-empty. 
-    If the given `StringJoiner` is empty, the call has no effect.
 * empty StringJoiner with / without prefix and suffix
     ```
     var stringJoiner = new StringJoiner(",");
