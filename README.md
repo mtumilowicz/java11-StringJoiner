@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/java11-StringJoiner.svg?branch=master)](https://travis-ci.com/mtumilowicz/java11-StringJoiner)
+
 # java11-StringJoiner
 Showcase of `StringJoiner` API.
 
