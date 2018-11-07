@@ -1,10 +1,12 @@
 # java11-StringJoiner
-Showcase of StringJoiner API.
+Showcase of `StringJoiner` API.
 
 # preface
 Please refer my other github project about joining Strings 
 (using Collectors.joining or String.join): 
-[Collectors.joining](https://github.com/mtumilowicz/java11-StringJoiner).
+[Collectors.joining](https://github.com/mtumilowicz/java11-collectors-joining).
+
+
 
 # project description
 We provide tests for mentioned above methods:
